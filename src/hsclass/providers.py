@@ -58,8 +58,16 @@ def parse_llm_response(text: str, id_to_key: dict[str, str]) -> dict[str, Answer
     cleaned = re.sub(r"^```(?:json)?\s*|\s*```$", "", cleaned, flags=re.IGNORECASE).strip()
     try:
         data = json.loads(cleaned)
-    except json.JSONDecodeError as exc:
-        raise ProviderError(f"reply was not valid JSON: {exc}") from exc
+    except json.JSONDecodeError:
+        # Models sometimes add a sentence around the JSON; try the outermost {...} span.
+        start, end = cleaned.find("{"), cleaned.rfind("}")
+        try:
+            if start < 0 or end <= start:
+                raise ValueError("no JSON object found")
+            data = json.loads(cleaned[start:end + 1])
+        except (ValueError, json.JSONDecodeError) as exc:
+            snippet = cleaned[:80].replace("\n", " ")
+            raise ProviderError(f"reply was not valid JSON: {exc} (starts: {snippet!r})") from exc
     results = data.get("results") if isinstance(data, dict) else data
     if not isinstance(results, list):
         raise ProviderError("reply had no 'results' list")
@@ -103,7 +111,7 @@ class AnthropicProvider:
         try:
             client = anthropic.Anthropic(max_retries=3)
             msg = client.messages.create(
-                model=self.model, max_tokens=2000, temperature=0, system=SYSTEM_PROMPT,
+                model=self.model, max_tokens=2000, system=SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}],
             )
         except Exception as exc:  # SDK raises several error types; all mean "this batch failed"

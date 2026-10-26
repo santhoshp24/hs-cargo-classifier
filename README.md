@@ -89,7 +89,19 @@ python run.py classify --providers anthropic,groq
 
 The second run needs no provider answers at all except for the 21 review items, which is the point of the design.
 
-**Read the accuracy figure with care.** On answered records, accuracy is 100% on this demo, but that number says very little: the offline matcher's keywords overlap the vocabulary of the synthetic data, so it is close to grading its own homework. It is **not** a benchmark of the approach or of any LLM. The LLM providers are tested here only against fakes (see Tests); they have not been run against live APIs in this repo, and no LLM accuracy is claimed. To measure real accuracy, run `classify` on your own labelled data and use `evaluate --truth-col`.
+### Live run with Claude
+
+The same 2,000 records classified by Claude (`--providers anthropic`, default model, empty learned lookup):
+
+| Method | Rows answered | Accuracy vs ground truth |
+|---|---|---|
+| Curated lookup | 905 | 100% |
+| Claude | 1,031 | 100% |
+| Sent to review | 64 | n/a |
+
+Coverage was 96.8% (answered, not sent to review). The offline matcher reached 95.6% on the same data.
+
+**Read the accuracy figures with care.** 100% on answered rows says little: the synthetic descriptions are clean and the questions are easy, so a strong model getting them right is expected. It is **not** a benchmark of the approach, and the offline matcher's 100% is weaker still because its keywords overlap the vocabulary of the generated data. What the live run does show is that the full flow works with a real provider: batching, reply validation, write-back to the learned lookup and routing of unsure or unparseable answers to review. Groq is wired the same way but has not been run live in this repo. To measure real accuracy, run `classify` on your own labelled data and use `evaluate --truth-col`.
 
 ## Using it in Power BI
 
@@ -107,7 +119,7 @@ src/hsclass/
   generate.py       synthetic data with ground truth
   cli.py            generate | classify | evaluate | learn
 data/               synthetic sample, curated seed, chapter dimension
-tests/              27 unit tests (standard library only)
+tests/              29 unit tests (standard library only)
 ```
 
 ## Tests
@@ -116,7 +128,7 @@ tests/              27 unit tests (standard library only)
 python -m unittest discover -s tests
 ```
 
-The suite covers normalisation, lookup rules, reply validation, tier ordering, fallback on failure and low confidence, learning rules, and the CLI end to end. The Groq and Claude clients are exercised with fake HTTP and a fake SDK, so retry and wiring logic is tested but live API behaviour is not.
+The suite covers normalisation, lookup rules, reply validation, tier ordering, fallback on failure and low confidence, learning rules, and the CLI end to end. The Groq and Claude clients are exercised with fake HTTP and a fake SDK, so retry and wiring logic is tested in CI-style runs without keys. Claude has also been run live once (see above), which caught two issues the fakes could not: newer Claude models reject the `temperature` parameter, and replies are sometimes wrapped in prose. Both are fixed and covered by tests.
 
 ## Limitations
 
