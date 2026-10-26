@@ -1,0 +1,97 @@
+hs_chapter,chapter_title,cargo_category,edible
+1,Live animals,Agri Raw Materials & Feed,Non-Edible
+2,Meat and edible meat offal,Food & Beverages,Edible
+3,"Fish, crustaceans and molluscs",Food & Beverages,Edible
+4,"Dairy, eggs, honey",Food & Beverages,Edible
+5,Other animal products,Agri Raw Materials & Feed,Non-Edible
+6,"Live plants, bulbs, cut flowers",Agri Raw Materials & Feed,Non-Edible
+7,"Edible vegetables, roots and tubers",Food & Beverages,Edible
+8,Edible fruit and nuts,Food & Beverages,Edible
+9,"Coffee, tea, spices",Food & Beverages,Edible
+10,Cereals,Food & Beverages,Edible
+11,"Milling products, malt, starches",Food & Beverages,Edible
+12,"Oil seeds, grains, seeds, fodder plants",Agri Raw Materials & Feed,Non-Edible
+13,"Lac, gums, resins, plant extracts",Agri Raw Materials & Feed,Non-Edible
+14,Vegetable plaiting materials,Agri Raw Materials & Feed,Non-Edible
+15,Animal and vegetable fats and oils,Food & Beverages,Edible
+16,Preparations of meat and fish,Food & Beverages,Edible
+17,Sugars and sugar confectionery,Food & Beverages,Edible
+18,Cocoa and cocoa preparations,Food & Beverages,Edible
+19,"Cereal, flour and pastry preparations",Food & Beverages,Edible
+20,Vegetable and fruit preparations,Food & Beverages,Edible
+21,Miscellaneous edible preparations,Food & Beverages,Edible
+22,"Beverages, spirits and vinegar",Food & Beverages,Edible
+23,"Food industry residues, animal feed",Agri Raw Materials & Feed,Non-Edible
+24,Tobacco and nicotine products,Agri Raw Materials & Feed,Non-Edible
+25,"Salt, sulphur, earths, stone, cement","Minerals, Ores & Fuels",Non-Edible
+26,"Ores, slag and ash","Minerals, Ores & Fuels",Non-Edible
+27,"Mineral fuels, oils and waxes","Minerals, Ores & Fuels",Non-Edible
+28,Inorganic chemicals,Chemicals & Fertilisers,Non-Edible
+29,Organic chemicals,Chemicals & Fertilisers,Non-Edible
+30,Pharmaceutical products,Chemicals & Fertilisers,Non-Edible
+31,Fertilisers,Chemicals & Fertilisers,Non-Edible
+32,"Dyes, pigments, paints, inks",Chemicals & Fertilisers,Non-Edible
+33,"Essential oils, perfumery, cosmetics",Chemicals & Fertilisers,Non-Edible
+34,"Soap, detergents, candles, polishes",Chemicals & Fertilisers,Non-Edible
+35,"Albuminoids, modified starches, glues, enzymes",Chemicals & Fertilisers,Non-Edible
+36,"Explosives, pyrotechnics, matches",Chemicals & Fertilisers,Non-Edible
+37,Photographic goods,Chemicals & Fertilisers,Non-Edible
+38,Miscellaneous chemical products,Chemicals & Fertilisers,Non-Edible
+39,Plastics and articles thereof,Plastics & Rubber,Non-Edible
+40,Rubber and articles thereof,Plastics & Rubber,Non-Edible
+41,"Raw hides, skins and leather","Textiles, Apparel & Leather",Non-Edible
+42,"Leather articles, handbags, travel goods","Textiles, Apparel & Leather",Non-Edible
+43,Furskins and artificial fur,"Textiles, Apparel & Leather",Non-Edible
+44,Wood and articles of wood,"Wood, Paper & Pulp",Non-Edible
+45,Cork and articles of cork,"Wood, Paper & Pulp",Non-Edible
+46,"Straw and plaiting manufactures, basketware","Wood, Paper & Pulp",Non-Edible
+47,"Wood pulp, recovered paper","Wood, Paper & Pulp",Non-Edible
+48,Paper and paperboard,"Wood, Paper & Pulp",Non-Edible
+49,Printed books and printed matter,"Wood, Paper & Pulp",Non-Edible
+50,Silk,"Textiles, Apparel & Leather",Non-Edible
+51,Wool and animal hair,"Textiles, Apparel & Leather",Non-Edible
+52,Cotton,"Textiles, Apparel & Leather",Non-Edible
+53,Other vegetable textile fibres,"Textiles, Apparel & Leather",Non-Edible
+54,Man-made filaments,"Textiles, Apparel & Leather",Non-Edible
+55,Man-made staple fibres,"Textiles, Apparel & Leather",Non-Edible
+56,"Wadding, felt, nonwovens, cordage","Textiles, Apparel & Leather",Non-Edible
+57,Carpets and floor coverings,"Textiles, Apparel & Leather",Non-Edible
+58,"Special woven fabrics, lace, embroidery","Textiles, Apparel & Leather",Non-Edible
+59,Coated and laminated textile fabrics,"Textiles, Apparel & Leather",Non-Edible
+60,Knitted or crocheted fabrics,"Textiles, Apparel & Leather",Non-Edible
+61,"Apparel, knitted or crocheted","Textiles, Apparel & Leather",Non-Edible
+62,"Apparel, not knitted or crocheted","Textiles, Apparel & Leather",Non-Edible
+63,"Other made-up textile articles, worn clothing","Textiles, Apparel & Leather",Non-Edible
+64,Footwear,"Textiles, Apparel & Leather",Non-Edible
+65,Headgear,"Textiles, Apparel & Leather",Non-Edible
+66,"Umbrellas, walking sticks, whips","Textiles, Apparel & Leather",Non-Edible
+67,"Feathers, artificial flowers, human hair articles","Textiles, Apparel & Leather",Non-Edible
+68,"Articles of stone, plaster, cement, mica","Stone, Ceramics, Glass & Gems",Non-Edible
+69,Ceramic products,"Stone, Ceramics, Glass & Gems",Non-Edible
+70,Glass and glassware,"Stone, Ceramics, Glass & Gems",Non-Edible
+71,"Pearls, gems, precious metals, jewellery","Stone, Ceramics, Glass & Gems",Non-Edible
+72,Iron and steel,Metals & Metal Articles,Non-Edible
+73,Articles of iron or steel,Metals & Metal Articles,Non-Edible
+74,Copper and articles thereof,Metals & Metal Articles,Non-Edible
+75,Nickel and articles thereof,Metals & Metal Articles,Non-Edible
+76,Aluminium and articles thereof,Metals & Metal Articles,Non-Edible
+78,Lead and articles thereof,Metals & Metal Articles,Non-Edible
+79,Zinc and articles thereof,Metals & Metal Articles,Non-Edible
+80,Tin and articles thereof,Metals & Metal Articles,Non-Edible
+81,"Other base metals, cermets",Metals & Metal Articles,Non-Edible
+82,"Tools, cutlery of base metal",Metals & Metal Articles,Non-Edible
+83,Miscellaneous articles of base metal,Metals & Metal Articles,Non-Edible
+84,"Machinery, boilers, mechanical appliances",Machinery & Electronics,Non-Edible
+85,Electrical machinery and equipment,Machinery & Electronics,Non-Edible
+86,Railway rolling stock and track fittings,Vehicles & Transport Equipment,Non-Edible
+87,Vehicles (not railway) and parts,Vehicles & Transport Equipment,Non-Edible
+88,Aircraft and spacecraft,Vehicles & Transport Equipment,Non-Edible
+89,"Ships, boats and floating structures",Vehicles & Transport Equipment,Non-Edible
+90,"Optical, measuring, medical instruments",Machinery & Electronics,Non-Edible
+91,Clocks and watches,Machinery & Electronics,Non-Edible
+92,Musical instruments,Machinery & Electronics,Non-Edible
+93,Arms and ammunition,"Furniture, Toys & Other Goods",Non-Edible
+94,"Furniture, bedding, lighting, prefab buildings","Furniture, Toys & Other Goods",Non-Edible
+95,"Toys, games and sports equipment","Furniture, Toys & Other Goods",Non-Edible
+96,Miscellaneous manufactured articles,"Furniture, Toys & Other Goods",Non-Edible
+97,Works of art and antiques,"Furniture, Toys & Other Goods",Non-Edible
